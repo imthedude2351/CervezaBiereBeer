@@ -11,6 +11,6 @@ router.get('/new', isLoggedIn, beersCtrl.new);
 // POST /beers
 router.post('/', isLoggedIn, beersCtrl.create);
 router.get('/:id', isLoggedIn, beersCtrl.show);
-router.delete('/:id', isLoggedIn, beersCtrl.delete);
+// router.delete('/:id', isLoggedIn, beersCtrl.delete);
 
 module.exports = router;

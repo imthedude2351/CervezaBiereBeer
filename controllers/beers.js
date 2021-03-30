@@ -4,8 +4,17 @@ module.exports = {
     index,
     show,
     new: newBeer,
-    create
+    create,
+    // delete: deleteBeer,
 };
+
+// function deleteBeer(req, res) {
+//     Beer.findByIdAndDelete(req.params.id, function(err, deletedPupster) {
+//         if (err) console.log(err);
+//         res.redirect('/beers');
+//     })
+// }
+
 function show(req, res){
     Beer.findById(req.params.id, function(err, beer) {
         res.render('beers/show', { title: 'Beer Details', beer })
