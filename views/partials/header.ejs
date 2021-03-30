@@ -10,6 +10,7 @@
 <body>
 
  <nav>
+     <a href="/" <%- title === 'Home' ? 'class="active"': '' %>>HOME</a>
     <a href="/beers" <%- title === 'All Beers' ? 'class="active"' : '' %>>ALL BEERS</a>
     <% if (user) { %>
         <a href="/beers/new" <%- title === 'Add Beer' ? 'class="active"' : '' %>>ADD BEER</a>

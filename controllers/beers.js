@@ -2,9 +2,15 @@ const Beer = require('../models/beer');
 
 module.exports = {
     index,
+    show,
     new: newBeer,
     create
 };
+function show(req, res){
+    Beer.findById(req.params.id, function(err, beer) {
+        res.render('beers/show', { title: 'Beer Details', beer })
+    });
+}
 
 function index(req, res) {
     Beer.find({}, function(err, beers) {
@@ -12,18 +18,15 @@ function index(req, res) {
     });
 }
 
+function newBeer(req, res){
+    res.render('beers/new', { title: 'Add Beer' });
+}
+
 function create(req, res) {
-    for (let key in req.body) {
-        if (req.body[key] === '') delete req.body[key];
-    }
     const beer = new Beer(req.body);
     beer.save(function(err) {
         if (err) return res.redirect('/beers/new');
         console.log(beer);
-        res.redirect(`/beers/${beer._id}`);
+        res.redirect('/beers');
     });
-}
-
-function newBeer(req, res){
-    res.render('beers/new', { title: 'Add Beer' });
 }
