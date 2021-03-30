@@ -10,13 +10,13 @@
 <body>
 
  <nav>
-     <a href="/" <%- title === 'Home' ? 'class="active"': '' %>>HOME</a>
-    <a href="/beers" <%- title === 'All Beers' ? 'class="active"' : '' %>>ALL BEERS</a>
+     <a href="/" <%- title === 'Home' ? 'class="active"': '' %>>Home</a>
+    <a href="/beers" <%- title === 'All Beers' ? 'class="active"' : '' %>>All Beers</a>
     <% if (user) { %>
-        <a href="/beers/new" <%- title === 'Add Beer' ? 'class="active"' : '' %>>ADD BEER</a>
-        <a href="/logout">LOG OUT</a>
+        <a href="/beers/new" <%- title === 'Add Beer' ? 'class="active"' : '' %>>Add Beer</a>
+        <a href="/logout">Log Out</a>
     <% } else { %>
-        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+        <a href="/auth/google" class="login">Log In&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
     <% } %>
  </nav>
    <h1><%= title %></h1>

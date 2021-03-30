@@ -2,8 +2,19 @@ const Beer = require('../models/beer');
 
 module.exports = {
   create,
+  update,
   delete: deleteReview
 };
+
+function update(req, res) {
+    Beer.findOne({'reviews._id': req.params.id}, function(err, beer) {
+        let review = beer.reviews.id(req.params.id);
+        Object.assign(review, req.body);
+        beer.save(function(err) {
+            res.redirect(`/beers/${beer._id}`);
+        })
+    })
+}
 
 function deleteReview(req, res, next) {
   Beer.findOne({'reviews._id': req.params.id}).then(function(beer) {
