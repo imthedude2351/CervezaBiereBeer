@@ -2,6 +2,7 @@
 <table id="list">
   <thead>
     <tr>
+      <th></th>
       <th>Title</th>
       <th>Percentage</th>
       <th>Brewery</th>
@@ -11,8 +12,13 @@
   <tbody>
     <% beers.forEach(function(b) { %>
       <tr>
+        <td>
+          <form action="/beers/<%= b._id %>?_method=DELETE" method="POST">
+            <button type="submit">X</button>
+          </form>
+        </td>
         <td><%= b.title %></td>
-        <td><%= b.beerPercent %></td>
+        <td><%= b.beerPercent %>%</td>
         <td><%= b.brewery %></td>
         <td><a href="/beers/<%= b._id %>">Info</a></td>
       </tr>
