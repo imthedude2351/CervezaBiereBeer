@@ -8,7 +8,7 @@
 <img src="https://imgur.com/hoZwm5l.png" width="80%">
 <img src="https://imgur.com/CpbgmVH.png" width="80%">
 
-##  Technologies Used:*
+##  Technologies Used:
 * HTML
 * CSS
 * JavaScript
