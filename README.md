@@ -4,9 +4,9 @@
 
 #  Screenshots: 
 <img src="https://imgur.com/dcBYIZO.png" width="80%">
-![alt text] (https://imgur.com/zEXuyUE.png)
-![alt text] (https://imgur.com/hoZwm5l.png)
-![alt text] (https://imgur.com/CpbgmVH.png)
+<img src="https://imgur.com/zEXuyUE.png" width="80%">
+<img src="https://imgur.com/hoZwm5l.png" width="80%">
+<img src="https://imgur.com/CpbgmVH.png" width="80%">
 
 ##  Technologies Used:*
 * HTML
