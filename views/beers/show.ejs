@@ -1,14 +1,14 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-  <div>Title: 
+  <div><div class="bold">Title:</div> 
     <%= beer.title %></div>
-  <div>Type of Beer: 
+  <div><div class="bold">Type of Beer:</div> 
     <%= beer.typeBeer %></div>
-  <div>Percentage: 
+  <div><div class="bold">Percentage:</div>
     <%= beer.beerPercent %></div>
-  <div>Brewery:
-    <%= beer.brewery %></div>
+  <div><div class="bold">Brewery:</div>
+  <%= beer.brewery %></div>
 </section>
 
 <br><br>
@@ -16,9 +16,9 @@
 
 <% if (user) { %> 
 <form id="add-review-form" method="POST" action="/beers/<%= beer._id %>/reviews">
-  <label>Review:</label>
+  <label class="reviewRate">Review:</label>
   <textarea name="content"></textarea>
-  <label>Rating:</label>
+  <label class="reviewRate">Rating:</label>
   <select name="rating">
     <option value="1">1</option>
     <option value="2">2</option>

@@ -37,7 +37,7 @@ function create(req, res) {
     req.body.userName = req.user.name;
     req.body.userAvatar = req.user.avatar;
 
-    beer.reviews.push(req.body);
+    beer.reviews.unshift(req.body);
     beer.save(function(err) {
       res.redirect(`/beers/${beer._id}`);
     });

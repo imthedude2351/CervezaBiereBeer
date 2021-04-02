@@ -111,12 +111,8 @@ table td {
 
 #show-page {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
-}
-
-#show-page div:nth-child(even) {
-  font-weight: bold;
+  grid-template-columns: auto auto auto;
+  grid-gap: 5rem;
 }
 
 #add-review-form {
@@ -124,6 +120,7 @@ table td {
   grid-template-columns: auto auto;
   grid-gap: 1rem;
   margin-bottom: 2rem;
+  margin-right: 4rem;
 }
 
 #add-review-form input[type="submit"]  {
@@ -158,18 +155,13 @@ li {
   align-items: center;
 }
 
-.review-user img {
-  border-radius: 50%;
-  height: 40px;
-}
-
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   background-image: url("https://imgur.com/0Z8x7rF.png");
-  background-repeat: repeat;
+  /* background-repeat: round; */
   background-size: cover;
 }
 
@@ -191,4 +183,17 @@ li {
   width: 45%;
   font-size: 50px;
   color: rgb(119, 56, 56);
+}
+
+::placeholder {
+  color: rgb(176, 189, 187);
+  font-size: 13px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.reviewRate {
+  margin-left: 1.5rem;
 }

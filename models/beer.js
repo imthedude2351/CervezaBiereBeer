@@ -15,10 +15,10 @@ const beerSchema = new Schema({
     title: String,
     typeBeer: {
         type: String,
-        enum: ['Pale Lager and Pilsner', 'Pale Ale', 'India Pale Ale', 'Double India Pale Ale', 'Porter', 'Stout', 'Belgian-Style Ale', 'Sour Ale'],
+        enum: ['Pale Lager and Pilsner', 'Pale Ale', 'India Pale Ale', 'Double India Pale Ale', 'Porter', 'Stout', 'Belgian-Style Ale', 'Sour Ale/Cider'],
         default: 'India Pale Ale'
     },
-    beerPercent: Number,
+    beerPercent: String,
     brewery: String,
     reviews: [reviewSchema],
     user: {type: Schema.Types.ObjectId, ref: 'User'},
