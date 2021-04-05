@@ -13,9 +13,10 @@
     <% beers.forEach(function(b) { %>
       <tr>
         <td>
-          <form action="/beers/<%= b._id %>?_method=DELETE" method="POST">
+          <!--             needs a % below!  -->
+          <!-- <form action="/beers/<= b._id %>?_method=DELETE" method="POST">
             <button type="submit">X</button>
-          </form>
+          </form> -->
         </td>
         <td><%= b.title %></td>
         <td><%= b.beerPercent %>%</td>
